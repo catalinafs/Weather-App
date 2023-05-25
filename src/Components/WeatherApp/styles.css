@@ -7,9 +7,9 @@
     --4: #c5c5c5;
     --5: #adadad60;
     /* --5: #adadad57; */
-    --6: #303030c7; 
-    --7: #ffffff; 
-    --8: #080808; 
+    --6: #303030c7;
+    --7: #ffffff;
+    --8: #080808;
 }
 
 * {
@@ -119,7 +119,7 @@ main {
     color: var(--6);
 }
 
-.Max-Min_Icon_Description .Icon-Weather_Description{
+.Max-Min_Icon_Description .Icon-Weather_Description {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,8 +137,200 @@ main {
     color: var(--6);
 }
 
+/* x-sm */
+@media (width <=512px) {
+    .ContainerApp {
+        margin: 30px 20px 30px 20px;
+    }
 
+    .SearchBar {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        flex-direction: column;
+        gap: 20px;
+    }
 
+    .SearchBar>h2 {
+        font-size: 2rem;
+    }
+
+    .CityCountryDay {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding: 24px 15px 12px 15px;
+        min-height: 85vh;
+    }
+
+    .MainWeather {
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .MainWeather>h2 {
+        font-size: 4.5rem;
+    }
+
+    .Max-Min_Icon_Description {
+        flex-direction: column-reverse;
+        gap: 3em;
+        margin: 0px 15px 0px 15px;
+        padding: 0px 0px 35px 0px;
+    }
+}
+
+/* sm */
+@media (512px < width <=640px) {
+    .SearchBar {
+        padding-top: 22px;
+        padding-bottom  : 22px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .CityCountryDay {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        min-height: 85vh;
+    }
+
+    .MainWeather {
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .Max-Min_Icon_Description {
+        flex-direction: column-reverse;
+        gap: 3em;
+    }
+}
+
+/* md */
+@media (640px < width <=768px) {
+    .SearchBar {
+        padding-top: 22px;
+        padding-bottom  : 22px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .SearchBar>h2 {
+        font-size: 2.5rem;
+    }
+
+    .CityCountryDay {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        min-height: 85vh;
+    }
+
+    .MainWeather {
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .Max-Min_Icon_Description {
+        flex-direction: column-reverse;
+        gap: 3em;
+    }
+}
+
+/* lg */
+@media (768px < width <=1010px) {
+    .ContainerInformation {
+        min-height: 85vh;
+        width: 100%;
+        /* box-sizing: content-box; */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .MainWeather {
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .Max-Min_Icon_Description {
+        flex-direction: column-reverse;
+        gap: 3em;
+    }
+}
+
+/* xl */
+@media (1010px < width <=1400px) {
+    .ContainerApp {
+        border: 2px solid var(--7)
+    }
+
+    .SearchBar>h2 {
+        font-size: 3rem;
+    }
+
+    .ContainerInformation {
+        min-height: 85vh;
+        width: 100%;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* 2xl */
+@media (width > 1400px) {
+    .ContainerApp {
+        border: 2px solid var(--7)
+    }
+
+    .SearchBar>h2 {
+        font-size: 4rem;
+    }
+
+    .ContainerInformation {
+        min-height: 85vh;
+        width: 100%;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .CityCountryDay {
+        font-size: x-large;
+    }
+
+    .Max-Min_Icon_Description {
+        gap: 7.5em;
+    }
+
+    .Max-Min_Icon_Description .Max_Min {
+        font-size: 2rem;
+    }
+
+    .Icon-Weather_Description>h2 {
+        font-size: 2rem;
+    }
+
+    .MainWeather>h2 {
+        font-size: 6.5rem;
+    }
+}
 
 
 
@@ -210,46 +402,6 @@ main {
 }
 
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* x-sm */

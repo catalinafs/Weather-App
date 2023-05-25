@@ -42,39 +42,42 @@ export const WeatherApp = ({ data }) => {
           <SearchBar />
         </div>
 
-        {/* City, Country    Today, Month */}
-        <div className="CityCountryDay">
-          <h1>{`${name}, ${country}`}</h1>
-          <h2>Today, Month</h2>
-        </div>
+        <div className="ContainerInformation">
 
-        {/* Icon Weather    Max-Min temperature */}
-        <div className="MainDescription">
-          <div className="MainWeather">
-            <div className='Max-Min_Icon_Description'>
-              <div className="Max_Min">
-                <h3>{`Max: ${max_temp}°`}</h3>
-                <h3>{`Min: ${min_temp}°`}</h3>
-              </div>
-
-              <div className="Icon-Weather_Description">
-                <img src={weather_icon} alt='Image' />
-                <h2>{weather_description}</h2>
-              </div>
-            </div>
-
-            <h2>{`${temp}°`}</h2>
+          {/* City, Country    Today, Month */}
+          <div className="CityCountryDay">
+            <h1>{`${name}, ${country}`}</h1>
+            <h2>Today, Month</h2>
           </div>
-        </div>
 
-        {/* weather widgeds */}
-        <WeatherWidgeds
-          feels_like={feels_like}
-          clouds={clouds}
-          humidity={humidity}
-          visibility={visibility}
-          wind_speed={wind_speed}
-        />
+          {/* Icon Weather    Max-Min temperature */}
+          <div className="MainDescription">
+            <div className="MainWeather">
+              <div className='Max-Min_Icon_Description'>
+                <div className="Max_Min">
+                  <h3>{`Max: ${max_temp}°`}</h3>
+                  <h3>{`Min: ${min_temp}°`}</h3>
+                </div>
+
+                <div className="Icon-Weather_Description">
+                  <img src={weather_icon} alt='Image' />
+                  <h2>{weather_description}</h2>
+                </div>
+              </div>
+
+              <h2>{`${temp}°`}</h2>
+            </div>
+          </div>
+
+          {/* weather widgeds */}
+          <WeatherWidgeds
+            feels_like={feels_like}
+            clouds={clouds}
+            humidity={humidity}
+            visibility={visibility}
+            wind_speed={wind_speed}
+          />
+        </div>
       </div>
     </main>
   );

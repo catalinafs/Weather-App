@@ -34,3 +34,68 @@ button {
 .icon {
     padding-left: 8px;
 }
+
+/* x-sm */
+@media (width <=512px) {
+    .search {
+        width: 12rem;
+    }
+
+    .search > input{
+        font-size: medium;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* sm */
+@media (512px < width <=640px) {
+    .search {
+        width: 18rem;
+    }
+
+    .search > input{
+        font-size: large;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* xl */
+@media (1010px < width <=1400px) {
+    .search {
+        width: 21rem;
+    }
+
+    .search > input{
+        font-size: larger;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* 2xl */
+@media (width > 1400px) {
+    .search {
+        width: 30rem;
+    }
+
+    .search > input{
+        font-size: x-large;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+}
