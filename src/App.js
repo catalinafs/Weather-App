@@ -17,7 +17,8 @@ const App = () => {
 
   return (
     <>
-      <WeatherApp data={data} />
+      {/* <WeatherApp data={data} /> */}
+      <ErrorPage />
     </>
   );
 }

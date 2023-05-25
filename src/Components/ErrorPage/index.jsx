@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './index.css';
 
 export const ErrorPage = () => {
     return (
-        <div>
-            🤖ERROR 404: The page has an error, we're working on it 👩‍💻
+        <div className='MainContainerError'>
+            <div className="Card">
+                <h2>
+                    🤖ERROR 404 | The city may don't exist 👩‍💻
+                </h2>
+            </div>
         </div>
-    )
+    );
 }
