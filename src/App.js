@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useFetch } from './hooks/useFetch';
+import { LoadingPage } from './Components/LoadingPage/index.jsx';
+import { ErrorPage } from './Components/ErrorPage/index.jsx';
+import { CLIMATE_API_KEY } from './Components/keys.js';
+import './GlobalStyles.css';
+import { WeatherApp } from './Components/WeatherApp/WeatherApp.jsx';
 
-function App() {
+const App = () => {
+  const city_name = 'Barranquilla';
+  const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${CLIMATE_API_KEY}`;
+
+  const { data, loading, error } = useFetch(urlApi);
+
+  if (loading) return (<><LoadingPage /></>);
+  if (error) return (<><ErrorPage /></>);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <WeatherApp data={data} />
+    </>
   );
 }
 
