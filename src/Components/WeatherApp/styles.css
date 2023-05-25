@@ -160,7 +160,6 @@ main {
         justify-content: center;
         gap: 10px;
         padding: 24px 15px 12px 15px;
-        min-height: 85vh;
     }
 
     .MainWeather {
@@ -195,7 +194,6 @@ main {
         align-items: flex-start;
         justify-content: center;
         gap: 10px;
-        min-height: 85vh;
     }
 
     .MainWeather {
@@ -223,12 +221,22 @@ main {
         font-size: 2.5rem;
     }
 
+    .ContainerInformation {
+        min-height: 85vh;
+        width: 100%;
+        /* box-sizing: content-box; */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .CityCountryDay {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         gap: 10px;
-        min-height: 85vh;
     }
 
     .MainWeather {
