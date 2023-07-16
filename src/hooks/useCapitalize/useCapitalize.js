@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const useCapitalize = (str) => {
     let pieces = str.split(" ");
     for (let i = 0; i < pieces.length; i++) {

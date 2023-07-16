@@ -1,7 +1,7 @@
 import React from 'react';
+import { useCelsius } from '../../hooks/useCelsius/useCelsius.js';
+import { useKilometers } from '../../hooks/useKilometers/useKilometers.js';
 import './styles.css';
-import { useCelsius } from '../../hooks/useCelsius';
-import { useKilometers } from '../../hooks/useKilometers';
 
 export const WeatherWidgeds = ({ feels_like, clouds, humidity, visibility, wind_speed }) => {
 

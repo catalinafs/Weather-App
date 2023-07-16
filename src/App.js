@@ -1,10 +1,10 @@
 import React from 'react';
-import { useFetch } from './hooks/useFetch';
-import { LoadingPage } from './Components/LoadingPage/index.jsx';
-import { ErrorPage } from './Components/ErrorPage/index.jsx';
 import { CLIMATE_API_KEY } from './Components/keys.js';
-import './GlobalStyles.css';
+import { ErrorPage } from './Components/ErrorPage/index.jsx';
+import { LoadingPage } from './Components/LoadingPage/index.jsx';
+import { useFetch } from './hooks/useFetch/useFetch.js';
 import { WeatherApp } from './Components/WeatherApp/WeatherApp.jsx';
+import './GlobalStyles.css';
 
 const App = () => {
   const city_name = 'Barranquilla';
@@ -17,8 +17,7 @@ const App = () => {
 
   return (
     <>
-      {/* <WeatherApp data={data} /> */}
-      <ErrorPage />
+      <WeatherApp data={data} />
     </>
   );
 }

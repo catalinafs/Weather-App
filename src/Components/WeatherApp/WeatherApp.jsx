@@ -1,9 +1,9 @@
-import { SearchBar } from '../SearchBar/SearchBar.jsx';
-import { useCapitalize } from '../../hooks/useCapitalize';
-import { useCelsius } from '../../hooks/useCelsius';
-import { useIconWeather } from '../../hooks/useIconWeather';
-import { WeatherWidgeds } from '../WeatherWidgeds/WeatherWidgeds.jsx';
 import React from 'react';
+import { SearchBar } from '../SearchBar/SearchBar.jsx';
+import { useCapitalize } from '../../hooks/useCapitalize/useCapitalize.js';
+import { useCelsius } from '../../hooks/useCelsius/useCelsius.js';
+import { useIconWeather } from '../../hooks/useIconWeather/useIconWeather.js';
+import { WeatherWidgeds } from '../WeatherWidgeds/WeatherWidgeds.jsx';
 import './styles.css';
 
 export const WeatherApp = ({ data }) => {
@@ -24,12 +24,14 @@ export const WeatherApp = ({ data }) => {
 
   temp = useCelsius(temp);
   temp = Math.trunc(temp);
+
   max_temp = useCelsius(max_temp);
   max_temp = Math.trunc(max_temp);
+
   min_temp = useCelsius(min_temp);
   min_temp = Math.trunc(min_temp);
 
-  weather_description = useCapitalize(weather_description)
+  weather_description = useCapitalize(weather_description);
 
   let weather_icon = useIconWeather(icon_weather);
 
@@ -43,14 +45,13 @@ export const WeatherApp = ({ data }) => {
         </div>
 
         <div className="ContainerInformation">
-
-          {/* City, Country    Today, Month */}
+          {/* City, Country - Today, Month */}
           <div className="CityCountryDay">
             <h1>{`${name}, ${country}`}</h1>
             <h2>Today, Month</h2>
           </div>
 
-          {/* Icon Weather    Max-Min temperature */}
+          {/* Icon Weather - Max-Min temperature */}
           <div className="MainDescription">
             <div className="MainWeather">
               <div className='Max-Min_Icon_Description'>

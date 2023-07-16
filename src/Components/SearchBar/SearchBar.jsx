@@ -2,22 +2,30 @@ import React from 'react';
 import './styles.css';
 
 export const SearchBar = () => {
+  /* not developed */
+  // const handleSubmit = (event) => {
+  //   if (event.keyCode === 13) {
+  //     // setCity(event.currentTarget.value);
+  //     // event.currentTarget.blur();
+  //   }
+  // }
+
   const handleSubmit = (event) => {
-    if (event.keyCode === 13) {
-      // setCity(event.currentTarget.value);
-      // event.currentTarget.blur();
-    }
+    event.preventDefault();
+    console.log(
+      '%cActualmente la barra de busquedas sigue en etapa de desarrollo',
+      `color: black;
+       font-size:24px;
+       font-family: monospace;
+       background: yellow;`
+    )
   }
 
   return (
     <div>
-    {/* <div className='search'> */}
       <form onSubmit={(event) => handleSubmit(event)} className='search'>
-        <input
-          type='text'
-          placeholder='Search'
-        />
-        <button type='submit'>
+        <input type='text' placeholder='Search' />
+        <button type='submit' onClick={(event) => { handleSubmit(event) }}>
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>

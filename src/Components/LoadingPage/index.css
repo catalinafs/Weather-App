@@ -12,17 +12,17 @@
     padding: 0px 50px;
 }
 
-.card{
+.card {
     box-sizing: content-box;
     width: 70%;
-    border-radius: 25px;
     padding: 25px;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     background-color: var(--cardBG);
+    border-radius: 25px;
 }
 
 .card>h2 {
@@ -33,19 +33,19 @@
 
 .loader {
     box-sizing: border-box;
-    display: inline-block;
-    position: relative;
     width: 80px;
     height: 80px;
+    display: inline-block;
+    position: relative;
 }
 
 .loader div {
-    position: absolute;
-    top: 33px;
     width: 13px;
     height: 13px;
-    border-radius: 50%;
     background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 33px;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 

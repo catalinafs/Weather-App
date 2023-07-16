@@ -24,7 +24,7 @@ export const useFetch = (urlApi) => {
                 setLoading(true);
                 const api = await fetch(urlApi);
                 const data = await api.json();
-                const {name, main, clouds, sys, visibility, weather, wind} = data;
+                const { name, main, clouds, sys, visibility, weather, wind } = data;
                 setLoading(false);
                 setData({
                     name: name,

@@ -6,23 +6,23 @@
     width: 100%;
     height: 96vh;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.Card{
+.Card {
     box-sizing: content-box;
     width: 55%;
-    border-radius: 25px;
     padding: 35px 25px;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     background-color: var(--cardBG);
+    border-radius: 25px;
 }
 
 .Card>h2 {
